@@ -1,0 +1,333 @@
+:root{
+    --purple: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+    --yellow: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+    --black: hsl(0, 0%, 7%);
+
+}
+
+*{
+    font-family: "DM Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+    background-color: #eee;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 400px;
+    gap: 30px;
+}
+
+.left, .right{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.grid img{
+    width: 100%;
+}
+
+.social{
+    color: white;
+    background-color: var(--purple-500);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.social h1{
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.social h1 span{
+    color: var(--yellow-500);
+}
+
+.social img{
+    width: 70%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.multiple{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.multiple img{
+    width: 100%;
+}
+
+.multiple h2{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 26px;
+    padding-top: 10px;
+}
+
+.schedule{
+    background-color: var(--yellow-500);
+    padding: 20px;
+    padding-bottom: 0;
+    border-radius: 10px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.schedule h3{
+    width: 75%;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.schedule img{
+    width: 65%;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+.sched-social{
+    background-color: var(--purple);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sched-social h3{
+    font-size: 28px;
+    line-height: 40px;
+    padding: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sched-social p{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.follower-growth{
+    border-radius: 10px;
+    background-color: var(--purple-500);
+    padding: 25px 70px;
+}
+
+.follower-growth p{
+    color: white;
+    font-size: 36px;
+    line-height: 30px;
+ 
+    text-align: center;
+    padding: 20px 5px 0px 5px;
+}
+
+.audience{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.audience h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.audience img{
+    width: 45%;
+    padding-top: 10px;
+}
+
+.quicker-content{
+    border-radius: 10px;
+    background-color: var(--yellow);
+    padding: 20px;
+}
+
+.quicker-content h3{
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.quicker-content h3 span{
+    color: var(--purple-500);
+    font-style: italic;
+}
+
+.quicker-content img{
+    width: 50%;
+    padding-top: 30px;
+}
+
+.ai-content{
+    background-color: var(--yellow-500);
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.ai-content h2{
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.ai-content img{
+    width: 70%;
+}
+
+@media (min-width: 900px) {
+    .grid{
+        max-width: 900px;
+        width: 900px;
+    
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: "left right";
+        gap: 20px;
+        
+    }
+    .left{
+        grid-area: left;
+    }
+    .quicker-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .quicker-content img{
+        width: 90%;
+    }
+    .quicker-content h3{
+        font-size: 36px;
+        letter-spacing: -1px;
+        line-height: 34px;
+        font-weight: 500;
+    }
+    .ai-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .ai-content h2{
+        font-size: 36px;
+        letter-spacing: -1px;
+        line-height: 34px;
+        font-weight: 500;
+    }
+    .ai-content img{
+        width: 100%;
+    }
+    .right{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: right;
+        grid-template-areas: 
+            "social social sched-social"
+            "multiple schedule sched-social"
+            "audience follower-growth follower-growth";
+        gap: 20px;
+    }
+    .social{
+        grid-area: social;
+        padding: 40px 20px;
+    }
+    .social h1{
+        font-size: 46px;
+        line-height: 46px;
+    }
+    .social img{
+        width: 45%;
+    }
+    .sched-social{
+        grid-area: sched-social;
+        overflow: hidden;
+    }
+    .sched-social img{
+        width: 270px;
+    }
+    .sched-social h3{
+        padding: 15px 0;
+        font-size: 22px;
+        line-height: 20px;
+        text-align: left;
+    }
+    .sched-social p{
+        font-size: 16px;
+        padding: 15px 0;
+        text-align: left;
+    }
+
+    .multiple{
+        grid-area: multiple;
+    }
+    .multiple h2{
+        font-size: 24px;
+    }
+    .schedule{
+        grid-area: schedule;
+        overflow: hidden;
+    }
+    .schedule{
+        font-size: 24px;
+        height: 200px;
+    }
+    .schedule img{
+        width: 100%;
+    }
+    .audience{
+        grid-area: audience;
+
+    }
+    .audience h2{
+        font-size: 48px;
+    }
+    .audience p{
+        font-size: 14px;
+    }
+    .audience img{
+        width: 100%;
+    }
+    .follower-growth{
+        grid-area: follower-growth;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .follower-growth p{
+        text-align: left;
+        font-size: 32px;
+        line-height: 32px;
+        padding-left: 15px;
+    }
+    .follower-growth img{
+        width: 40%;
+    }
+
+}
